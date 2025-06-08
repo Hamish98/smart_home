@@ -1,3 +1,4 @@
+```
 proj/
 ├── message_hub/           # 通信总线/事件总线
 ├── device_manager/        # 设备管理与抽象
@@ -22,7 +23,7 @@ device_manager/
 └── CMakeLists.txt
 
 参考 HomeAssistant 的架构和分层思想，结合你的现有通信层（message_hub），推荐你的智能家居系统整体项目结构和开发规划如下：
-
+```
 ---
 
 ## 顶层目录结构建议

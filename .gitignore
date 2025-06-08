@@ -1,1 +1,2 @@
-proj/3th_lib/
+proj/3th_lib/*
+!proj/3th_lib/src/**/build.sh
