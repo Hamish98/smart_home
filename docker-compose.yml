@@ -1,0 +1,20 @@
+services:
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: eclipse-mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/mqtt/config:/mosquitto/config
+      - ./mosquitto/mqtt/data:/mosquitto/data
+      - ./mosquitto/mqtt/log:/mosquitto/log
+
+  ubuntu-ssh:
+    image: ubuntu-ssh:latest
+    container_name: ubuntu-ssh
+    stdin_open: true
+    volumes:
+      - ./proj:/root/proj
+    ports:
+      - "8866:22"

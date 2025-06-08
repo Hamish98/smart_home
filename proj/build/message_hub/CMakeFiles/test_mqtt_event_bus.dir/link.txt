@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -Wno-unused-parameter CMakeFiles/test_mqtt_event_bus.dir/test/test_mqtt_event_bus.cpp.o -o test_mqtt_event_bus   -L/root/proj/3th_lib/bin/lib  -L/root/proj/3th_lib/bin/lib64  -Wl,-rpath,/root/proj/3th_lib/bin/lib:/root/proj/3th_lib/bin/lib64 libmessage_hub.so -lpaho-mqttpp3 -lpaho-mqtt3as -lpthread 
