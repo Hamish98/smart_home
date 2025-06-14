@@ -4,6 +4,6 @@
 /root/proj/build/message_hub/CMakeFiles/test_mqtt_event_bus.dir
 /root/proj/build/message_hub/CMakeFiles/edit_cache.dir
 /root/proj/build/message_hub/CMakeFiles/rebuild_cache.dir
-/root/proj/build/device_manager/CMakeFiles/test_device_manager_database.dir
+/root/proj/build/device_manager/CMakeFiles/test_db.dir
 /root/proj/build/device_manager/CMakeFiles/edit_cache.dir
 /root/proj/build/device_manager/CMakeFiles/rebuild_cache.dir

@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -Wno-unused-parameter CMakeFiles/test_device_manager_database.dir/tests/test_device_manager_database.cpp.o -o test_device_manager_database   -L/root/proj/3th_lib/bin/lib  -L/root/proj/3th_lib/bin/lib64  -Wl,-rpath,/root/proj/3th_lib/bin/lib:/root/proj/3th_lib/bin/lib64 -lsqlpp11 -lsqlpp11-sqlite3 -lsqlite3 

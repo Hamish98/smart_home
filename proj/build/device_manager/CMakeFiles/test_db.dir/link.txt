@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -Wno-unused-parameter CMakeFiles/test_db.dir/tests/test_db.cpp.o -o test_db   -L/root/proj/3th_lib/bin/lib  -L/root/proj/3th_lib/bin/lib64  -Wl,-rpath,/root/proj/3th_lib/bin/lib:/root/proj/3th_lib/bin/lib64 -lsoci_core -lsoci_sqlite3 -lsqlite3 -lpthread 

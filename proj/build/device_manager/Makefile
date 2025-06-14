@@ -117,42 +117,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-device_manager/CMakeFiles/test_device_manager_database.dir/rule:
-	cd /root/proj/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 device_manager/CMakeFiles/test_device_manager_database.dir/rule
-.PHONY : device_manager/CMakeFiles/test_device_manager_database.dir/rule
+device_manager/CMakeFiles/test_db.dir/rule:
+	cd /root/proj/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 device_manager/CMakeFiles/test_db.dir/rule
+.PHONY : device_manager/CMakeFiles/test_db.dir/rule
 
 # Convenience name for target.
-test_device_manager_database: device_manager/CMakeFiles/test_device_manager_database.dir/rule
-.PHONY : test_device_manager_database
+test_db: device_manager/CMakeFiles/test_db.dir/rule
+.PHONY : test_db
 
 # fast build rule for target.
-test_device_manager_database/fast:
-	cd /root/proj/build && $(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_device_manager_database.dir/build.make device_manager/CMakeFiles/test_device_manager_database.dir/build
-.PHONY : test_device_manager_database/fast
+test_db/fast:
+	cd /root/proj/build && $(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_db.dir/build.make device_manager/CMakeFiles/test_db.dir/build
+.PHONY : test_db/fast
 
-tests/test_device_manager_database.o: tests/test_device_manager_database.cpp.o
-.PHONY : tests/test_device_manager_database.o
+tests/test_db.o: tests/test_db.cpp.o
+.PHONY : tests/test_db.o
 
 # target to build an object file
-tests/test_device_manager_database.cpp.o:
-	cd /root/proj/build && $(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_device_manager_database.dir/build.make device_manager/CMakeFiles/test_device_manager_database.dir/tests/test_device_manager_database.cpp.o
-.PHONY : tests/test_device_manager_database.cpp.o
+tests/test_db.cpp.o:
+	cd /root/proj/build && $(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_db.dir/build.make device_manager/CMakeFiles/test_db.dir/tests/test_db.cpp.o
+.PHONY : tests/test_db.cpp.o
 
-tests/test_device_manager_database.i: tests/test_device_manager_database.cpp.i
-.PHONY : tests/test_device_manager_database.i
+tests/test_db.i: tests/test_db.cpp.i
+.PHONY : tests/test_db.i
 
 # target to preprocess a source file
-tests/test_device_manager_database.cpp.i:
-	cd /root/proj/build && $(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_device_manager_database.dir/build.make device_manager/CMakeFiles/test_device_manager_database.dir/tests/test_device_manager_database.cpp.i
-.PHONY : tests/test_device_manager_database.cpp.i
+tests/test_db.cpp.i:
+	cd /root/proj/build && $(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_db.dir/build.make device_manager/CMakeFiles/test_db.dir/tests/test_db.cpp.i
+.PHONY : tests/test_db.cpp.i
 
-tests/test_device_manager_database.s: tests/test_device_manager_database.cpp.s
-.PHONY : tests/test_device_manager_database.s
+tests/test_db.s: tests/test_db.cpp.s
+.PHONY : tests/test_db.s
 
 # target to generate assembly for a file
-tests/test_device_manager_database.cpp.s:
-	cd /root/proj/build && $(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_device_manager_database.dir/build.make device_manager/CMakeFiles/test_device_manager_database.dir/tests/test_device_manager_database.cpp.s
-.PHONY : tests/test_device_manager_database.cpp.s
+tests/test_db.cpp.s:
+	cd /root/proj/build && $(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_db.dir/build.make device_manager/CMakeFiles/test_db.dir/tests/test_db.cpp.s
+.PHONY : tests/test_db.cpp.s
 
 # Help Target
 help:
@@ -162,10 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test_device_manager_database"
-	@echo "... tests/test_device_manager_database.o"
-	@echo "... tests/test_device_manager_database.i"
-	@echo "... tests/test_device_manager_database.s"
+	@echo "... test_db"
+	@echo "... tests/test_db.o"
+	@echo "... tests/test_db.i"
+	@echo "... tests/test_db.s"
 .PHONY : help
 
 

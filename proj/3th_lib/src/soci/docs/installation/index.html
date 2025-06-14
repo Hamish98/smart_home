@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Installation - SOCI (4.1.2)</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">SOCI (4.1.2)</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Overview</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../quickstart/" class="dropdown-item">Getting Started</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Installation</a>
+</li>
+                                    
+<li>
+    <a href="../structure/" class="dropdown-item">Library Structure</a>
+</li>
+                                    
+<li>
+    <a href="../license/" class="dropdown-item">License</a>
+</li>
+                                    
+<li>
+    <a href="../faq/" class="dropdown-item">FAQ</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">User Guide</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../connections/" class="dropdown-item">Connections</a>
+</li>
+                                    
+<li>
+    <a href="../queries/" class="dropdown-item">Queries</a>
+</li>
+                                    
+<li>
+    <a href="../binding/" class="dropdown-item">Data Binding</a>
+</li>
+                                    
+<li>
+    <a href="../indicators/" class="dropdown-item">Data Indicators</a>
+</li>
+                                    
+<li>
+    <a href="../types/" class="dropdown-item">Data Types</a>
+</li>
+                                    
+<li>
+    <a href="../lobs/" class="dropdown-item">LOBs</a>
+</li>
+                                    
+<li>
+    <a href="../statements/" class="dropdown-item">Statements</a>
+</li>
+                                    
+<li>
+    <a href="../transactions/" class="dropdown-item">Transactions</a>
+</li>
+                                    
+<li>
+    <a href="../procedures/" class="dropdown-item">Procedures</a>
+</li>
+                                    
+<li>
+    <a href="../errors/" class="dropdown-item">Errors</a>
+</li>
+                                    
+<li>
+    <a href="../logging/" class="dropdown-item">Logging</a>
+</li>
+                                    
+<li>
+    <a href="../interfaces/" class="dropdown-item">Interfaces</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Backends</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../backends/" class="dropdown-item">Features</a>
+</li>
+                                    
+<li>
+    <a href="../backends/db2/" class="dropdown-item">DB2</a>
+</li>
+                                    
+<li>
+    <a href="../backends/firebird/" class="dropdown-item">Firebird</a>
+</li>
+                                    
+<li>
+    <a href="../backends/mysql/" class="dropdown-item">MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../backends/odbc/" class="dropdown-item">ODBC</a>
+</li>
+                                    
+<li>
+    <a href="../backends/oracle/" class="dropdown-item">Oracle</a>
+</li>
+                                    
+<li>
+    <a href="../backends/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+                                    
+<li>
+    <a href="../backends/sqlite3/" class="dropdown-item">SQLite3</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Miscellaneous</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../beyond/" class="dropdown-item">Beyond SQL</a>
+</li>
+                                    
+<li>
+    <a href="../multithreading/" class="dropdown-item">Multi-threading</a>
+</li>
+                                    
+<li>
+    <a href="../boost/" class="dropdown-item">Boost</a>
+</li>
+                                    
+<li>
+    <a href="../utilities/" class="dropdown-item">Utilities</a>
+</li>
+                                    
+<li>
+    <a href="../vagrant/" class="dropdown-item">Vagrant</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">API</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../api/client/" class="dropdown-item">Client API</a>
+</li>
+                                    
+<li>
+    <a href="../api/backend/" class="dropdown-item">Backend API</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ada</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../languages/ada/" class="dropdown-item">Ada Bindings</a>
+</li>
+            
+<li>
+    <a href="../languages/ada/concepts/" class="dropdown-item">Ada Concepts</a>
+</li>
+            
+<li>
+    <a href="../languages/ada/idioms/" class="dropdown-item">Ada Idioms</a>
+</li>
+            
+<li>
+    <a href="../languages/ada/reference/" class="dropdown-item">Ada API Reference</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../quickstart/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../structure/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/SOCI/soci/edit/master/docs/installation.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#installation" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#requirements" class="nav-link">Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#downloads" class="nav-link">Downloads</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#building-with-cmake" class="nav-link">Building with CMake</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#building-with-conan" class="nav-link">Building with Conan</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#running-tests" class="nav-link">Running tests</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#using-the-library" class="nav-link">Using the library</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="installation">Installation</h1>
+<h2 id="requirements">Requirements</h2>
+<p>Below is an overall list of SOCI core:</p>
+<ul>
+<li>C++ compiler: <a href="https://gcc.gnu.org/">GCC</a>, <a href="https://msdn.microsoft.com/en-us/visualc">Microsoft Visual C++</a>, <a href="https://clang.llvm.org/">LLVM/clang</a></li>
+<li><a href="https://www.cmake.org">CMake</a> 3.23+</li>
+<li>Optional: <a href="https://www.boost.org">Boost C++ Libraries</a>: DateTime, Fusion, Optional, Preprocessor, Tuple</li>
+</ul>
+<p>and backend-specific dependencies:</p>
+<ul>
+<li><a href="https://pic.dhe.ibm.com/infocenter/db2luw/v10r1/topic/com.ibm.swg.im.dbclient.install.doc/doc/c0023452.html">DB2 Call Level Interface (CLI)</a></li>
+<li><a href="https://www.firebirdsql.org/manual/ufb-cs-clientlib.html">Firebird client library</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/5.6/en/c-api.html">mysqlclient</a> - C API to MySQL</li>
+<li>ODBC (Open Database Connectivity) implementation: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms710252.aspx">Microsoft ODBC</a> <a href="https://www.iodbc.org/">iODBC</a>, <a href="https://www.unixodbc.org/">unixODBC</a></li>
+<li><a href="https://www.oracle.com/technetwork/database/features/oci/index.html">Oracle Call Interface (OCI)</a></li>
+<li><a href="https://www.postgresql.org/docs/current/static/libpq.html">libpq</a> - C API to PostgreSQL</li>
+<li><a href="https://www.sqlite.org/">SQLite 3</a> library</li>
+</ul>
+<h2 id="downloads">Downloads</h2>
+<p>Download package with latest release of the SOCI source code:
+<a href="https://sourceforge.net/projects/soci/">soci-X.Y.Z</a>,
+where X.Y.Z is the version number. Unpack the archive.</p>
+<p>You can always clone SOCI from the Git repository:</p>
+<pre><code class="language-console">git clone --recurse-submodules git://github.com/SOCI/soci.git
+</code></pre>
+<h2 id="building-with-cmake">Building with CMake</h2>
+<p>For building SOCI, <a href="https://cmake.org/">CMake</a> version 3.23 or later is
+required.</p>
+<p>The build configuration allows to control various aspects of compilation and
+installation by setting common CMake variables that change behaviour, describe
+system or control build (see <a href="https://cmake.org/cmake/help/documentation.html">CMake help</a>)
+as well as SOCI-specific variables described below.
+All these variables are available regardless of platform or compilation toolset used.</p>
+<p>Running CMake from the command line allows to set variables in the CMake cache
+with the following syntax: <code>-DVARIABLE:TYPE=VALUE</code>. If you are new to CMake,
+you may find the tutorial <a href="https://cmake.org/cmake/help/runningcmake.html">Running CMake</a> helpful.</p>
+<h3 id="tldr">TL;DR</h3>
+<p>Steps outline using GNU Make <code>Makefile</code>-s:</p>
+<pre><code class="language-console">cmake -DSOCI_ORACLE=OFF (...) -B build -S /path/to/soci-X.Y.Z
+cmake --build build
+</code></pre>
+<p>Optionally, SOCI defines an install target that can be executed (on Unix systems)
+via <code>make install</code>.</p>
+<h3 id="cmake-configuration">CMake configuration</h3>
+<p>By default, CMake will try to determine availability of all dependencies automatically.
+If you are lucky, you will not need to specify any of the CMake variables explained below.
+However, if CMake reports some of the core or backend-specific dependencies
+as missing, you will need specify relevant variables to tell CMake where to look
+for the required components.</p>
+<p>The following sections provide summary of variables accepted by CMake scripts configuring SOCI build.
+The lists consist of common variables for SOCI core and all backends as well as variables specific to SOCI backends and their direct dependencies.</p>
+<p>List of a few essential CMake variables:</p>
+<ul>
+<li><code>CMAKE_BUILD_TYPE</code> - string - Specifies the build type for make based generators (see CMake <a href="https://cmake.org/cmake/help/cmake-2-8-docs.html#variable:CMAKE_BUILD_TYPE">help</a>).</li>
+<li><code>CMAKE_INSTALL_PREFIX</code> - path - Install directory used by install command (see CMake <a href="https://cmake.org/cmake/help/cmake-2-8-docs.html#variable:CMAKE_INSTALL_PREFIX">help</a>).</li>
+<li><code>CMAKE_VERBOSE_MAKEFILE</code> - boolean - If ON, create verbose makefile (see CMake <a href="https://cmake.org/cmake/help/cmake-2-8-docs.html#variable:CMAKE_VERBOSE_MAKEFILE">help</a>).</li>
+</ul>
+<p>List of variables to control common SOCI features and dependencies:</p>
+<ul>
+<li><code>SOCI_SHARED</code> - boolean - Request to build shared libraries for SOCI. Default is <code>ON</code>.</li>
+<li><code>SOCI_TESTS</code> - boolean - Request to build unit tests for SOCI. Default is <code>ON</code>, if you build SOCI standalone. Otherwise, it defaults to <code>OFF</code>.</li>
+<li><code>WITH_BOOST</code> - string - Should CMake try to detect <a href="https://www.boost.org/">Boost C++ Libraries</a>. If <code>ON</code> (default), CMake will try to find Boost headers and binaries of <a href="https://www.boost.org/doc/libs/release/doc/html/date_time.html"><code>Boost.Date_Time</code></a> library and provide special support for Boost types if they are found. If <code>OFF</code>, no attempt to find Boost will be made. Finally, if this option has the value of <code>REQUIRED</code>, the behaviour is the same as with <code>ON</code> but an error is given if <code>Boost.Date_Time</code> is not found.</li>
+</ul>
+<p>Some other build options:</p>
+<ul>
+<li><code>SOCI_ASAN</code> - boolean - Build with address sanitizer (ASAN) support. Useful for finding problems when debugging, but shouldn't be used for the production builds due to extra overhead. Default is <code>OFF</code>.</li>
+<li><code>SOCI_UBSAN</code> - boolean - Build with undefined behaviour sanitizer (ASAN) support. Default is <code>OFF</code>.</li>
+<li><code>SOCI_LTO</code> - boolean - Build with link-time optimizations, if supported. This produces noticeably smaller libraries. Default is <code>OFF</code>, but turning it on is recommended for the production builds.</li>
+</ul>
+<p>When it comes to enabling specific backends, SOCI supports three distinct options that can be used as <code>Enabler</code> type as used below:</p>
+<ul>
+<li><code>AUTO</code>: Try to locate the backend's dependencies. If all dependencies are met, enable the backend, otherwise disable it and continue without it.</li>
+<li><code>OFF</code>: Disable the backend.</li>
+<li><code>ON</code>: Enables the backend. If one or more of its dependencies are unmet, error and abort configuration.</li>
+</ul>
+<p>SQLite backend is special, as it may use the built-in SQLite library if the system version is not found, see its documentation below for more details.</p>
+<h4 id="empty-sample-backend">Empty (sample backend)</h4>
+<ul>
+<li><code>SOCI_EMPTY</code> - Enabler - Enables the <a href="../backends/">sample backend</a> called Empty. Always ON by default.</li>
+<li><code>SOCI_EMPTY_TEST_CONNSTR</code> - string - Connection string used to run regression tests of the Empty backend. It is a dummy value. Example: <code>-DSOCI_EMPTY_TEST_CONNSTR="dummy connection"</code></li>
+<li><code>SOCI_EMPTY_SKIP_TESTS</code> - boolean - Skips testing this backend.</li>
+</ul>
+<h4 id="ibm-db2">IBM DB2</h4>
+<ul>
+<li><code>SOCI_DB2</code> - Enabler - Enables the <a href="../backends/db2/">DB2</a> backend.</li>
+<li><code>DB2_INCLUDE_DIRS</code> - string - Path to DB2 CLI include directories where CMake should look for <code>sqlcli1.h</code> header.</li>
+<li><code>DB2_LIBRARIES</code> - string - Full paths to  <code>db2</code> or <code>db2api</code> libraries to link SOCI against to enable the backend support.</li>
+<li><code>SOCI_DB2_TEST_CONNSTR</code> - string - See <a href="../backends/db2/">DB2 backend reference</a> for details. Example: <code>-DSOCI_DB2_TEST_CONNSTR:STRING="DSN=SAMPLE;Uid=db2inst1;Pwd=db2inst1;autocommit=off"</code></li>
+<li><code>SOCI_DB2_SKIP_TESTS</code> - boolean - Skips testing this backend.</li>
+</ul>
+<h4 id="firebird">Firebird</h4>
+<ul>
+<li><code>SOCI_FIREBIRD</code> - Enabler - Enables the <a href="../backends/firebird/">Firebird</a> backend.</li>
+<li><code>Firebird_INCLUDE_DIRS</code> - string - Path to Firebird include directories where CMake should look for <code>ibase.h</code> header.</li>
+<li><code>Firebird_LIBRARIES</code> - string - Full paths to Firebird <code>fbclient</code> or <code>fbclient_ms</code> libraries to link SOCI against to enable the backend support.</li>
+<li><code>SOCI_FIREBIRD_TEST_CONNSTR</code> - string - See <a href="../backends/firebird/">Firebird backend reference</a> for details. Example: <code>-DSOCI_FIREBIRD_TEST_CONNSTR:STRING="service=LOCALHOST:/tmp/soci_test.fdb user=SYSDBA password=masterkey"</code></li>
+<li><code>SOCI_FIREBIRD_SKIP_TESTS</code> - boolean - Skips testing this backend.</li>
+</ul>
+<h4 id="mysql">MySQL</h4>
+<ul>
+<li><code>SOCI_MYSQL</code> - Enabler - Enables the <a href="../backends/mysql/">MySQL</a> backend.</li>
+<li><code>MySQL_INCLUDE_DIRS</code> - string - Path to MySQL include directory where CMake should look for <code>mysql.h</code> header.</li>
+<li><code>MySQL_LIBRARIES</code> - string - Full paths to libraries to link SOCI against to enable the backend support.</li>
+<li><code>SOCI_MYSQL_TEST_CONNSTR</code> - string - Connection string to MySQL test database. Format of the string is explained <a href="../backends/mysql/">MySQL backend reference</a>. Example: <code>-DSOCI_MYSQL_TEST_CONNSTR:STRING="db=mydb user=mloskot password=secret"</code></li>
+<li><code>SOCI_MYSQL_SKIP_TESTS</code> - boolean - Skips testing this backend.</li>
+</ul>
+<p>Furthermore, the <code>MYSQL_DIR</code> <em>environment variable</em> can be set to the MySQL installation root. CMake will scan subdirectories <code>MYSQL_DIR/include</code> and <code>MYSQL_DIR/lib</code> respectively for MySQL headers and libraries.</p>
+<h4 id="odbc">ODBC</h4>
+<ul>
+<li><code>SOCI_ODBC</code> - Enabler - Enables the <a href="../backends/odbc/">ODBC</a> backend.</li>
+<li><code>SOCI_ODBC_TEST_{database}_CONNSTR</code> - string - ODBC Data Source Name (DSN) or ODBC File Data Source Name (FILEDSN) to test database: Microsoft Access (.mdb), Microsoft SQL Server, MySQL, PostgreSQL or any other ODBC SQL data source. {database} is placeholder for name of database driver ACCESS, MYSQL, POSTGRESQL, etc. See <a href="../backends/odbc/">ODBC</a> backend reference for details. Example: <code>-DSOCI_ODBC_TEST_POSTGRESQL_CONNSTR="FILEDSN=/home/mloskot/soci/build/test-postgresql.dsn"</code></li>
+<li><code>SOCI_ODBC_SKIP_TESTS</code> - boolean - Skips testing this backend.</li>
+</ul>
+<h4 id="oracle">Oracle</h4>
+<ul>
+<li><code>SOCI_ORACLE</code> - Enabler - Enables the <a href="../backends/oracle/">Oracle</a> backend.</li>
+<li><code>Oracle_INCLUDE_DIRS</code> - string - Path to Oracle include directory where CMake should look for <code>oci.h</code> header.</li>
+<li><code>Oracle_LIBRARIES</code> - string - Full paths to libraries to link SOCI against to enable the backend support.</li>
+<li><code>SOCI_ORACLE_TEST_CONNSTR</code> - string - Connection string to Oracle test database. Format of the string is explained <a href="../backends/oracle/">Oracle backend reference</a>. Example: <code>-DSOCI_ORACLE_TEST_CONNSTR:STRING="service=orcl user=scott password=tiger"</code></li>
+<li><code>SOCI_ORACLE_SKIP_TESTS</code> - boolean - Skips testing this backend.</li>
+</ul>
+<h4 id="postgresql">PostgreSQL</h4>
+<ul>
+<li><code>SOCI_POSTGRESQL</code> - Enabler - Enables the <a href="../backends/postgresql/">PostgreSQL</a> backend.</li>
+<li><code>SOCI_POSTGRESQL_TEST_CONNSTR</code> - string - Connection string to PostgreSQL test database. Format of the string is explained PostgreSQL backend reference. Example: <code>-DSOCI_POSTGRESQL_TEST_CONNSTR:STRING="dbname=mydb user=scott"</code></li>
+<li><code>SOCI_POSTGRESQL_SKIP_TESTS</code> - boolean - Skips testing this backend.</li>
+</ul>
+<h4 id="sqlite-3">SQLite 3</h4>
+<ul>
+<li><code>SOCI_SQLITE3</code> - Enabler - Enables the <a href="../backends/sqlite3/">SQLite3</a> backend. Note that, unlike with all the other backends, if SQLite3 library is not found, built-in version of SQLite3 is used instead of the backend being disabled. <code>SOCI_SQLITE3_BUILTIN</code> can be set to <code>OFF</code> to prevent this from happening, i.e. force using system version only, or, on the contrary, set to <code>ON</code> to always use the built-in version, even if SQLite3 library is available on the system.</li>
+<li><code>SOCI_SQLITE3_TEST_CONNSTR</code> - string - Connection string is simply a file path where SQLite3 test database will be created (e.g. /home/john/soci_test.db). Check <a href="../backends/sqlite3/">SQLite3 backend reference</a> for details. Example: <code>-DSOCI_SQLITE3_TEST_CONNSTR="my.db"</code> or <code>-DSOCI_SQLITE3_TEST_CONNSTR=":memory:"</code>.</li>
+<li><code>SOCI_SQLITE3_SKIP_TESTS</code> - boolean - Skips testing this backend.</li>
+</ul>
+<h2 id="building-with-conan">Building with Conan</h2>
+<p>SOCI is available as a <a href="https://docs.conan.io/en/latest/">Conan</a> package since
+February 2021 for the version <a href="https://conan.io/center/soci">4.0.1</a> for the
+following backends: sqlite3, odbc, mysql, and postgresql.</p>
+<p>This section lists the steps required to use SOCI in a CMake project with Conan:</p>
+<h3 id="install-conan">Install Conan</h3>
+<p>Install Conan if it is not installed yet:</p>
+<pre><code class="language-console">pip3 install conan
+</code></pre>
+<h3 id="create-conanfiletxt">Create <code>conanfile.txt</code></h3>
+<p>Create a <code>conanfile.txt</code> in the same directory of the <code>CMakeLists.txt</code>, with a
+<em>reference to a recipe</em> (which is a string with the library name and the
+version to use), the build options, and the CMake generator:</p>
+<pre><code class="language-text"># conanfile.txt
+[requires]
+soci/4.0.1
+
+[options]
+soci:shared       = True
+soci:with_sqlite3 = True
+
+[generators]
+cmake
+</code></pre>
+<p>The option <code>soci:with_sqlite3 = True</code> indicates that the <code>sqlite3</code> backend will
+be downloaded and used.</p>
+<h3 id="update-cmakeliststxt">Update <code>CMakeLists.txt</code></h3>
+<p>Add the following Conan-specific lines to the <code>CMakeLists.txt</code> of your project:</p>
+<pre><code class="language-cmake">include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
+conan_target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
+</code></pre>
+<p>The command <code>conan_target_link_libraries</code> replaces <code>target_link_libraries</code>.</p>
+<h3 id="run-conan">Run Conan</h3>
+<p>Run <code>conan install</code> to install SOCI, and then build your project as usual:</p>
+<pre><code class="language-bash">mkdir build
+cd build
+conan install .. --build=soci
+cmake ..
+cmake . --build
+</code></pre>
+<h2 id="running-tests">Running tests</h2>
+<p>The process of running regression tests highly depends on user's environment and build configuration, so it may be quite involving process.
+The CMake configuration provides variables to allow users willing to run the tests to configure build and specify database connection parameters (see the lists above for variable names).</p>
+<p>In order to run regression tests, configure and build desired SOCI backends and prepare working database instances for them.</p>
+<p>While configuring build with CMake, specify <code>SOCI_TESTS=ON</code> to enable building regression tests.
+Also, specify <code>SOCI_{backend name}_TEST_CONNSTR</code> variables to tell the tests runner how to connect with your test databases.</p>
+<p>Dedicated <code>make test</code> target can be used to execute regression tests on build completion:</p>
+<pre><code class="language-console">mkdir build
+cd build
+cmake -G &quot;Unix Makefiles&quot; \
+        -DWITH_BOOST=OFF \
+        -DSOCI_TESTS=ON \
+        -DSOCI_EMPTY_TEST_CONNSTR=&quot;dummy connection&quot; \
+        -DSOCI_SQLITE3_TEST_CONNSTR=&quot;test.db&quot; \
+        (...)
+        ../soci-X.Y.Z
+make
+make test
+make install
+</code></pre>
+<p>In the example above, regression tests for the sample Empty backend and SQLite 3 backend are configured for execution by <code>make test</code> target.</p>
+<h2 id="using-the-library">Using the library</h2>
+<p>CMake build produces set separate libraries for SOCI's core and all enabled backends.</p>
+<p>If your project also uses CMake, you can simply use <code>find_package(SOCI)</code> to check for SOCI availability and <code>target_link_libraries()</code> to link with the <code>SOCI::soci</code> target. An example of a very simple CMake-based project using SOCI is provided in the <code>examples/connect</code> directory.</p>
+<p>Alternatively, you can add SOCI as a subdirectory to your project and include it via <code>add_subdirectory()</code>. As before, <code>target_link_libraries()</code> is used to link with the <code>SOCI::soci</code> target. An example of this can be found in the directory <code>examples/subdir-include</code>.</p>
+<p>If you don't use CMake but want to use SOCI in your program, you need to specify the paths to the SOCI headers and libraries in your build configuration and to
+tell the linker to link against the libraries you want to use in your program.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2017-2025 <a href="https://soci.sourceforge.net/people.html">SOCI Team</a>.</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

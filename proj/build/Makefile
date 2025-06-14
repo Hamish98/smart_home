@@ -143,17 +143,17 @@ test_mqtt_event_bus/fast:
 .PHONY : test_mqtt_event_bus/fast
 
 #=============================================================================
-# Target rules for targets named test_device_manager_database
+# Target rules for targets named test_db
 
 # Build rule for target.
-test_device_manager_database: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_device_manager_database
-.PHONY : test_device_manager_database
+test_db: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_db
+.PHONY : test_db
 
 # fast build rule for target.
-test_device_manager_database/fast:
-	$(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_device_manager_database.dir/build.make device_manager/CMakeFiles/test_device_manager_database.dir/build
-.PHONY : test_device_manager_database/fast
+test_db/fast:
+	$(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_db.dir/build.make device_manager/CMakeFiles/test_db.dir/build
+.PHONY : test_db/fast
 
 # Help Target
 help:
@@ -164,7 +164,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... message_hub"
-	@echo "... test_device_manager_database"
+	@echo "... test_db"
 	@echo "... test_mqtt_event_bus"
 .PHONY : help
 

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>PostgreSQL - SOCI (4.1.2)</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SOCI (4.1.2)</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Overview</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../quickstart/" class="dropdown-item">Getting Started</a>
+</li>
+                                    
+<li>
+    <a href="../../installation/" class="dropdown-item">Installation</a>
+</li>
+                                    
+<li>
+    <a href="../../structure/" class="dropdown-item">Library Structure</a>
+</li>
+                                    
+<li>
+    <a href="../../license/" class="dropdown-item">License</a>
+</li>
+                                    
+<li>
+    <a href="../../faq/" class="dropdown-item">FAQ</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">User Guide</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../connections/" class="dropdown-item">Connections</a>
+</li>
+                                    
+<li>
+    <a href="../../queries/" class="dropdown-item">Queries</a>
+</li>
+                                    
+<li>
+    <a href="../../binding/" class="dropdown-item">Data Binding</a>
+</li>
+                                    
+<li>
+    <a href="../../indicators/" class="dropdown-item">Data Indicators</a>
+</li>
+                                    
+<li>
+    <a href="../../types/" class="dropdown-item">Data Types</a>
+</li>
+                                    
+<li>
+    <a href="../../lobs/" class="dropdown-item">LOBs</a>
+</li>
+                                    
+<li>
+    <a href="../../statements/" class="dropdown-item">Statements</a>
+</li>
+                                    
+<li>
+    <a href="../../transactions/" class="dropdown-item">Transactions</a>
+</li>
+                                    
+<li>
+    <a href="../../procedures/" class="dropdown-item">Procedures</a>
+</li>
+                                    
+<li>
+    <a href="../../errors/" class="dropdown-item">Errors</a>
+</li>
+                                    
+<li>
+    <a href="../../logging/" class="dropdown-item">Logging</a>
+</li>
+                                    
+<li>
+    <a href="../../interfaces/" class="dropdown-item">Interfaces</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Backends</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Features</a>
+</li>
+                                    
+<li>
+    <a href="../db2/" class="dropdown-item">DB2</a>
+</li>
+                                    
+<li>
+    <a href="../firebird/" class="dropdown-item">Firebird</a>
+</li>
+                                    
+<li>
+    <a href="../mysql/" class="dropdown-item">MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../odbc/" class="dropdown-item">ODBC</a>
+</li>
+                                    
+<li>
+    <a href="../oracle/" class="dropdown-item">Oracle</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">PostgreSQL</a>
+</li>
+                                    
+<li>
+    <a href="../sqlite3/" class="dropdown-item">SQLite3</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Miscellaneous</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../beyond/" class="dropdown-item">Beyond SQL</a>
+</li>
+                                    
+<li>
+    <a href="../../multithreading/" class="dropdown-item">Multi-threading</a>
+</li>
+                                    
+<li>
+    <a href="../../boost/" class="dropdown-item">Boost</a>
+</li>
+                                    
+<li>
+    <a href="../../utilities/" class="dropdown-item">Utilities</a>
+</li>
+                                    
+<li>
+    <a href="../../vagrant/" class="dropdown-item">Vagrant</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">API</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../api/client/" class="dropdown-item">Client API</a>
+</li>
+                                    
+<li>
+    <a href="../../api/backend/" class="dropdown-item">Backend API</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ada</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../languages/ada/" class="dropdown-item">Ada Bindings</a>
+</li>
+            
+<li>
+    <a href="../../languages/ada/concepts/" class="dropdown-item">Ada Concepts</a>
+</li>
+            
+<li>
+    <a href="../../languages/ada/idioms/" class="dropdown-item">Ada Idioms</a>
+</li>
+            
+<li>
+    <a href="../../languages/ada/reference/" class="dropdown-item">Ada API Reference</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../oracle/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../sqlite3/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/SOCI/soci/edit/master/docs/backends/postgresql.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#postgresql-backend-reference" class="nav-link">PostgreSQL Backend Reference</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#soci-feature-support" class="nav-link">SOCI Feature Support</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#native-api-access" class="nav-link">Native API Access</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#backend-specific-extensions" class="nav-link">Backend-specific extensions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="postgresql-backend-reference">PostgreSQL Backend Reference</h1>
+<p>SOCI backend for accessing PostgreSQL database.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<h3 id="supported-versions">Supported Versions</h3>
+<p>The SOCI PostgreSQL backend is supported for use with PostgreSQL &gt;= 9.0, although older versions may suffer from limited feature support. See below for details.</p>
+<h3 id="tested-platforms">Tested Platforms</h3>
+<table>
+<thead>
+<tr>
+<th>PostgreSQL</th>
+<th>OS</th>
+<th>Compiler</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14</td>
+<td>macOS 11.7</td>
+<td>AppleClang 13</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Ubuntu 22.04</td>
+<td>gcc 11.4</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Windows Server 2019</td>
+<td>MSVS 2022</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Windows Server 2019</td>
+<td>MSVS 2019</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Windows Server 2016</td>
+<td>MSVS 2017</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Windows Server 2012 R2</td>
+<td>MSVS 2015</td>
+</tr>
+<tr>
+<td>9.4</td>
+<td>Windows Server 2012 R2</td>
+<td>Mingw-w64/GCC 8.1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="required-client-libraries">Required Client Libraries</h3>
+<p>The SOCI PostgreSQL backend requires PostgreSQL's <code>libpq</code> client library.</p>
+<p>Note that the SOCI library itself depends also on <code>libdl</code>, so the minimum set of libraries needed to compile a basic client program is:</p>
+<pre><code class="language-console">-lsoci_core -lsoci_postgresql -ldl -lpq
+</code></pre>
+<h3 id="connecting-to-the-database">Connecting to the Database</h3>
+<p>To establish a connection to the PostgreSQL database, create a <code>session</code> object using the <code>postgresql</code> backend factory together with a connection string:</p>
+<pre><code class="language-cpp">session sql(postgresql, &quot;dbname=mydatabase&quot;);
+
+// or:
+session sql(&quot;postgresql&quot;, &quot;dbname=mydatabase&quot;);
+
+// or:
+session sql(&quot;postgresql://dbname=mydatabase&quot;);
+</code></pre>
+<p>The set of parameters used in the connection string for PostgreSQL is the same as accepted by the <a href="https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PQCONNECTDB">PQconnectdb</a> function from the <code>libpq</code> library.</p>
+<p>In addition to standard PostgreSQL connection parameters, the following can be set:</p>
+<ul>
+<li><code>singlerow</code> or <code>singlerows</code></li>
+</ul>
+<p>For example:</p>
+<pre><code class="language-cpp">session sql(postgresql, &quot;dbname=mydatabase singlerows=true&quot;);
+</code></pre>
+<p>If the <code>singlerows</code> parameter is set to <code>true</code> or <code>yes</code>, then queries will be executed in the single-row mode, which prevents the client library from loading full query result sets into memory and instead fetches rows one by one, as they are requested by the statement's fetch() function. This mode can be of interest to those users who want to make their client applications more responsive (with more fine-grained operation) by avoiding potentially long blocking times when complete query results are loaded to client's memory.
+Note that in the single-row operation:</p>
+<ul>
+<li>bulk queries are not supported, and</li>
+<li>in order to fulfill the expectations of the underlying client library, the complete rowset has to be exhausted before executing further queries on the same session.</li>
+</ul>
+<p>Once you have created a <code>session</code> object as shown above, you can use it to access the database, for example:</p>
+<pre><code class="language-cpp">int count;
+sql &lt;&lt; &quot;select count(*) from invoices&quot;, into(count);
+</code></pre>
+<p>(See the <a href="../../connections/">connection</a> and <a href="../../binding/">data binding</a> documentation for general information on using the <code>session</code> class.)</p>
+<h2 id="soci-feature-support">SOCI Feature Support</h2>
+<h3 id="dynamic-binding">Dynamic Binding</h3>
+<p>The PostgreSQL backend supports the use of the SOCI <code>row</code> class, which facilitates retrieval of data whose type is not known at compile time.</p>
+<p>When calling <code>row::get&lt;T&gt;()</code>, the type you should pass as <code>T</code> depends upon the underlying database type. For the PostgreSQL backend, this type mapping is:</p>
+<table>
+<thead>
+<tr>
+<th>PostgreSQL Data Type</th>
+<th>SOCI Data Type (<code>data_type</code>)</th>
+<th><code>row::get&lt;T&gt;</code> specializations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numeric, real, double</td>
+<td>dt_double</td>
+<td>double</td>
+</tr>
+<tr>
+<td>boolean, smallint, integer</td>
+<td>dt_integer</td>
+<td>int</td>
+</tr>
+<tr>
+<td>int8</td>
+<td>dt_long_long</td>
+<td>long long</td>
+</tr>
+<tr>
+<td>oid</td>
+<td>dt_integer</td>
+<td>unsigned long</td>
+</tr>
+<tr>
+<td>char, varchar, text, cstring, bpchar</td>
+<td>dt_string</td>
+<td>std::string</td>
+</tr>
+<tr>
+<td>abstime, reltime, date, time, timestamp, timestamptz, timetz</td>
+<td>dt_date</td>
+<td>std::tm</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>PostgreSQL Data Type</th>
+<th>SOCI Data Type (<code>db_type</code>)</th>
+<th><code>row::get&lt;T&gt;</code> specializations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numeric, real, double</td>
+<td>db_double</td>
+<td>double</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>db_int8</td>
+<td>int8_t</td>
+</tr>
+<tr>
+<td>smallint</td>
+<td>db_int16</td>
+<td>int16_t</td>
+</tr>
+<tr>
+<td>integer</td>
+<td>db_int32</td>
+<td>int32_t</td>
+</tr>
+<tr>
+<td>int8</td>
+<td>db_int64</td>
+<td>int64_t</td>
+</tr>
+<tr>
+<td>oid</td>
+<td>db_int32</td>
+<td>int32_t</td>
+</tr>
+<tr>
+<td>char, varchar, text, cstring, bpchar</td>
+<td>db_string</td>
+<td>std::string</td>
+</tr>
+<tr>
+<td>abstime, reltime, date, time, timestamp, timestamptz, timetz</td>
+<td>db_date</td>
+<td>std::tm</td>
+</tr>
+</tbody>
+</table>
+<p>(See the <a href="../../types/#dynamic-binding">dynamic resultset binding</a> documentation for general information on using the <code>row</code> class.)</p>
+<h3 id="binding-by-name">Binding by Name</h3>
+<p>In addition to <a href="../../binding/#binding-by-position">binding by position</a>, the PostgreSQL backend supports <a href="../../binding/#binding-by-name">binding by name</a>, via an overload of the <code>use()</code> function:</p>
+<pre><code class="language-cpp">int id = 7;
+sql &lt;&lt; &quot;select name from person where id = :id&quot;, use(id, &quot;id&quot;)
+</code></pre>
+<h3 id="bulk-operations">Bulk Operations</h3>
+<p>The PostgreSQL backend has full support for SOCI's <a href="../../binding/#bulk-operations">bulk operations</a> interface.</p>
+<h3 id="transactions">Transactions</h3>
+<p><a href="../../transactions/">Transactions</a> are also fully supported by the PostgreSQL backend.</p>
+<h3 id="blob-data-type">blob Data Type</h3>
+<p>The PostgreSQL backend supports working with data stored in columns of type Blob, via SOCI's <a href="../../lobs/">blob</a> class.</p>
+<p>Note that 64-bit offsets require PostgreSQL client library 9.3 or later.</p>
+<h3 id="rowid-data-type">rowid Data Type</h3>
+<p>The concept of row identifier (OID in PostgreSQL) is supported via SOCI's <a href="../../api/client/#class-rowid">rowid</a> class.</p>
+<h3 id="nested-statements">Nested Statements</h3>
+<p>Nested statements are not supported by PostgreSQL backend.</p>
+<h3 id="stored-procedures">Stored Procedures</h3>
+<p>PostgreSQL stored procedures can be executed by using SOCI's <a href="../../procedures/">procedure</a> class.</p>
+<h2 id="native-api-access">Native API Access</h2>
+<p>SOCI provides access to underlying database APIs via several <code>get_backend()</code> functions, as described in the <a href="../../beyond/">beyond SOCI</a> documentation.</p>
+<p>The PostgreSQL backend provides the following concrete classes for native API access:</p>
+<table>
+<thead>
+<tr>
+<th>Accessor Function</th>
+<th>Concrete Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>session_backend * session::get_backend()</td>
+<td>postgresql_session_backend</td>
+</tr>
+<tr>
+<td>statement_backend * statement::get_backend()</td>
+<td>postgresql_statement_backend</td>
+</tr>
+<tr>
+<td>blob_backend * blob::get_backend()</td>
+<td>postgresql_blob_backend</td>
+</tr>
+<tr>
+<td>rowid_backend * rowid::get_backend()</td>
+<td>postgresql_rowid_backend</td>
+</tr>
+</tbody>
+</table>
+<h2 id="backend-specific-extensions">Backend-specific extensions</h2>
+<h3 id="uuid-data-type">uuid Data Type</h3>
+<p>The PostgreSQL backend supports working with data stored in columns of type UUID via simple string operations. All string representations of UUID supported by PostgreSQL are accepted on input, the backend will return the standard
+format of UUID on output. See the test <code>test_uuid_column_type_support</code> for usage examples.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2017-2025 <a href="https://soci.sourceforge.net/people.html">SOCI Team</a>.</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

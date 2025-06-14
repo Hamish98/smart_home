@@ -81,7 +81,7 @@ clean: device_manager/clean
 # Directory level rules for directory device_manager
 
 # Recursive "all" directory target.
-device_manager/all: device_manager/CMakeFiles/test_device_manager_database.dir/all
+device_manager/all: device_manager/CMakeFiles/test_db.dir/all
 .PHONY : device_manager/all
 
 # Recursive "preinstall" directory target.
@@ -89,7 +89,7 @@ device_manager/preinstall:
 .PHONY : device_manager/preinstall
 
 # Recursive "clean" directory target.
-device_manager/clean: device_manager/CMakeFiles/test_device_manager_database.dir/clean
+device_manager/clean: device_manager/CMakeFiles/test_db.dir/clean
 .PHONY : device_manager/clean
 
 #=============================================================================
@@ -162,30 +162,30 @@ message_hub/CMakeFiles/test_mqtt_event_bus.dir/clean:
 .PHONY : message_hub/CMakeFiles/test_mqtt_event_bus.dir/clean
 
 #=============================================================================
-# Target rules for target device_manager/CMakeFiles/test_device_manager_database.dir
+# Target rules for target device_manager/CMakeFiles/test_db.dir
 
 # All Build rule for target.
-device_manager/CMakeFiles/test_device_manager_database.dir/all:
-	$(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_device_manager_database.dir/build.make device_manager/CMakeFiles/test_device_manager_database.dir/depend
-	$(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_device_manager_database.dir/build.make device_manager/CMakeFiles/test_device_manager_database.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/root/proj/build/CMakeFiles --progress-num=4,5 "Built target test_device_manager_database"
-.PHONY : device_manager/CMakeFiles/test_device_manager_database.dir/all
+device_manager/CMakeFiles/test_db.dir/all:
+	$(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_db.dir/build.make device_manager/CMakeFiles/test_db.dir/depend
+	$(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_db.dir/build.make device_manager/CMakeFiles/test_db.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/root/proj/build/CMakeFiles --progress-num=4,5 "Built target test_db"
+.PHONY : device_manager/CMakeFiles/test_db.dir/all
 
 # Build rule for subdir invocation for target.
-device_manager/CMakeFiles/test_device_manager_database.dir/rule: cmake_check_build_system
+device_manager/CMakeFiles/test_db.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/proj/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 device_manager/CMakeFiles/test_device_manager_database.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 device_manager/CMakeFiles/test_db.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/proj/build/CMakeFiles 0
-.PHONY : device_manager/CMakeFiles/test_device_manager_database.dir/rule
+.PHONY : device_manager/CMakeFiles/test_db.dir/rule
 
 # Convenience name for target.
-test_device_manager_database: device_manager/CMakeFiles/test_device_manager_database.dir/rule
-.PHONY : test_device_manager_database
+test_db: device_manager/CMakeFiles/test_db.dir/rule
+.PHONY : test_db
 
 # clean rule for target.
-device_manager/CMakeFiles/test_device_manager_database.dir/clean:
-	$(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_device_manager_database.dir/build.make device_manager/CMakeFiles/test_device_manager_database.dir/clean
-.PHONY : device_manager/CMakeFiles/test_device_manager_database.dir/clean
+device_manager/CMakeFiles/test_db.dir/clean:
+	$(MAKE) $(MAKESILENT) -f device_manager/CMakeFiles/test_db.dir/build.make device_manager/CMakeFiles/test_db.dir/clean
+.PHONY : device_manager/CMakeFiles/test_db.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
